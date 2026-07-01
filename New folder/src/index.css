@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+  body {
+    @apply bg-[#090B10] text-white selection:bg-cyan-500/30 selection:text-cyan-400 overflow-x-hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tighter;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090B10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1A1D27;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00FFFF;
+    box-shadow: 0 0 10px #00FFFF;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  }
+  .neon-text-cyan {
+    @apply text-[#00FFFF] drop-shadow-[0_0_10px_rgba(0,255,255,0.5)];
+  }
+  .neon-text-fuchsia {
+    @apply text-[#FF004F] drop-shadow-[0_0_10px_rgba(255,0,79,0.5)];
+  }
+  .neon-border-cyan {
+    @apply border-[#00FFFF] shadow-[0_0_15px_rgba(0,255,255,0.3)];
+  }
+  .neon-border-fuchsia {
+    @apply border-[#FF004F] shadow-[0_0_15px_rgba(255,0,79,0.3)];
+  }
+}
+
+@theme {
+  --color-cyber-void: #090B10;
+  --color-cyber-steel: #1A1D27;
+  --color-cyber-cyan: #00FFFF;
+  --color-cyber-fuchsia: #FF004F;
+}
