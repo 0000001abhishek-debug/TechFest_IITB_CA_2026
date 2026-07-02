@@ -30,7 +30,7 @@ The objective of this project is to design and develop a responsive landing page
 ```
 TechFest_IITB_CA_2026/
 │
-├── Task 1/
+├── Task /
    ├── index.html
    ├── style.css
    ├── script.js
